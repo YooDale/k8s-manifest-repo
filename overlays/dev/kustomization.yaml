@@ -4,6 +4,9 @@ images:
 - name: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/daleyoo/simeple_app
   newName: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/daleyoo/simeple_app
   newTag: abcdefg
+- name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app
+  newName: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app
+  newTag: b60b4b4a
 resources:
 - ../../base
 patchesStrategicMerge:
