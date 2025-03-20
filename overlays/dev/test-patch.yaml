@@ -5,19 +5,20 @@ metadata:
   labels:
     env: dev
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: my-node-app
   template:
     metadata:
       labels:
-        app: my-node-app
-        test: hello
+        # 기존 app: my-node-app 라벨은 그대로 두고, "test" 라벨 값을 변경합니다.
+        test: "patched"
       annotations:
         instrumentation.opentelemetry.io/inject-nodejs: "true"
+        # 추가 어노테이션을 통해 patch가 적용되었음을 표시합니다.
+        patched: "true"
     spec:
       containers:
       - name: my-node-app
-        image: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app:latest
-        imagePullPolicy: Always
+        # 컨테이너에 임의의 환경 변수 추가 (Pod description에서 환경 변수 항목으로 확인 가능)
+        env:
+        - name: MY_PATCHED_ENV
+          value: "patched"
+
