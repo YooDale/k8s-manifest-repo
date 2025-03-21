@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - test.yaml
+- test.yaml
 images:
 - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app
   newName: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app
-  newTag: 68cbbca3
+  newTag: 1c15e501
