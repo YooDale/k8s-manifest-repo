@@ -16,5 +16,5 @@ spec:
     spec:
       containers:
       - name: my-node-app
-        image: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app
+        image: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/daleyoo/simeple_app:latest
         imagePullPolicy: Always
